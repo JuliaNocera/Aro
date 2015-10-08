@@ -98,7 +98,7 @@ angular.module('starter.controllers', [])
 
     var address = document.getElementById('address').value;
 
-    $scope.geocoder.geocode({'address': address}, function(results, status) {
+    $scope.geocoder.geocode(position, function(results, status) {
       if (status === google.maps.GeocoderStatus.OK) {
         $scope.map.setCenter(results[0].geometry.location);
         var coordsResult = results[0].geometry.location;
@@ -149,7 +149,7 @@ angular.module('starter.controllers', [])
       },
       function(position) {
         $scope.here = turf.point([position.coords.latitude, position.coords.longitude]);
-        $scope.there = [$rootScope.markerPosition["H"], $rootScope.markerPosition["L"]];
+        $scope.there = turf.point([$rootScope.markerPosition["H"], $rootScope.markerPosition["L"]]);
         $scope.bearing = Math.floor(turf.bearing($scope.here, $scope.there) - $scope.heading + 90);
         $scope.rotation = 'transform: rotate('+ $scope.bearing +'deg)';
         $scope.distance = Number(turf.distance($scope.here, $scope.there, 'miles')).toFixed(2);

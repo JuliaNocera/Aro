@@ -167,7 +167,7 @@ angular.module('starter.controllers', [])
       function(result) {
         $scope.compass = 'transform: rotate(-'+ result.magneticHeading +'deg)';
         $scope.heading = result.magneticHeading;
-        //  try result.magneticHeading?
+        //  was result.trueHeading?
       });
 
     }, false);

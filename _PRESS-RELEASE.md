@@ -1,12 +1,12 @@
-# Arrow #
+# Aro #
 
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
-  Arrow
+  Aro 
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
-  Arrow will point to where you need to go and take you there.
+  Aro points to where you need to go and takes you there.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
